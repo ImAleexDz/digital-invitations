@@ -7,6 +7,7 @@ from django.shortcuts import get_object_or_404
 class FamilyViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.AllowAny]
     serializer_class = FamilySerializers
+    queryset = Family.objects.all()
 
     def list(self, request):
         queryset = Family.objects.all()
